@@ -1,5 +1,8 @@
 import { Box, Button, Stack, Typography } from '@mui/material'
 import React from 'react'
+import checkbox from '../../assets/icons/checkbox.png';
+import play from '../../assets/icons/play.png';
+import './About.css'
 
 export default function About() {
   const content = [
@@ -20,24 +23,42 @@ export default function About() {
     },
 
   ]
+  const seeHowItWorks = () => (
+    <Stack sx={{
+      display: 'flex',
+      flexDirection: "row",
+      my: 2,
+    }}>
+      <img src={play} alt='playIcon' style={{
+        height: 20,
+        width: 20,
+        marginRight: 10,
+
+      }} />See how it works
+    </Stack>
+  )
   return (
     <Stack>
       <Stack sx={{
+        display: 'flex',
         flexDirection: 'row-reverse'
       }}>
         <Box sx={{
+          flex: 1,
           background: '#FAFAFA',
 
         }}>
           <img src={require('../../assets/cards/code.png')} alt='codeImg' />
         </Box>
         <Stack sx={{
-          alignItems: "flex-start"
+          alignItems: "flex-start",
+          p: 4,
+          flex: 1,
         }}>
           <Stack sx={{
             alignItems: "center",
           }}>
-            <Button variant='contained'>
+            <Button variant='contained' class="primaryButton">
               Share
             </Button>
           </Stack>
@@ -46,55 +67,54 @@ export default function About() {
             textAlign: "start"
           }}>
 
-            <Typography>Share anything you're working on.</Typography>
-            <Typography>Campsite has been instrumental in keeping designers aware of
+            <Typography class="h3">Share anything you're working on.</Typography>
+            <Typography class="bodyxl aboutSubheading">Campsite has been instrumental in keeping designers aware of
               each others' work-in-progress in a way that was previously
               slowing us down. It's also one of the only channels where. </Typography>
             <Stack sx={{
               flexDirection: 'row'
             }}>
-              <Box>Coded</Box>
-              <Box>100% Secure</Box>
+              <Box class="flex center"><img src={checkbox} alt='checkbox' />Coded</Box>
+              <Box class="flex center"><img src={checkbox} alt='checkbox' />100% Secure</Box>
             </Stack>
           </Stack>
-          <Stack>
-            See how it works
-          </Stack>
+          {seeHowItWorks()}
         </Stack>
 
       </Stack>
       <Stack sx={{
+        display: 'flex',
         flexDirection: 'row'
       }}>
         <Box sx={{
           background: '#FAFAFA',
+          flex: 1,
 
         }}>
           <img src={require('../../assets/cards/feedback.png')} alt='codeImg' />
         </Box>
         <Stack sx={{
-          alignItems: "flex-start"
+          alignItems: "flex-start",
+          flex: 1,
         }}>
           <Stack sx={{
             alignItems: "center",
           }}>
-            <Button variant='contained'>
+            <Button variant='contained' class="primaryButton">
               Feedback
             </Button>
           </Stack>
           <Stack sx={{
             alignItems: "flex-start",
-            textAlign: "start"
+            textAlign: "start",
           }}>
 
-            <Typography>Better feedback at the right time.</Typography>
-            <Typography>Campsite has been instrumental in keeping designers aware of
+            <Typography class="h3">Better feedback at the right time.</Typography>
+            <Typography class="bodyxl aboutSubheading">Campsite has been instrumental in keeping designers aware of
               each others' work-in-progress in a way that was previously
               slowing us down. It's also one of the only channels where. </Typography>
           </Stack>
-          <Stack>
-            See how it works
-          </Stack>
+          {seeHowItWorks()}
         </Stack>
 
       </Stack>
@@ -102,9 +122,15 @@ export default function About() {
         background: `linear-gradient(315deg, #FB432C 0%, #FF591E 100%)`,
 
       }}>
-        <Stack>
+        <Stack sx={{
+          color: 'white',
+          p: 4,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
           <Typography>Best time here</Typography>
-          <Typography>Better feedback at the right time.</Typography>
+          <Typography class="h3">Better feedback at the right time.</Typography>
         </Stack>
         <Stack sx={{
           p: 4,
@@ -113,23 +139,35 @@ export default function About() {
             background: "black",
             px: 5,
             pb: 8,
+            borderRadius: 3,
+
           }}>
             <Stack sx={{
               background: "#222222",
-
+              p: 2,
+              color: 'white',
             }}>
               <Stack sx={{
                 flexDirection: 'row',
+                justifyContent: 'space-between',
+                mb: 2
               }}>
-                <Stack>
+                <Stack sx={{
+                  textAlign: 'left'
+                }}>
                   <Typography>Cloudhub</Typography>
-                  <Typography>2m ago in Brand</Typography>
+                  <Typography sx={{
+                    color: "#737373"
+
+                  }}>2m ago in Brand</Typography>
                 </Stack>
                 <Stack>
-                  <Button variant='contained'>View post</Button>
+                  <Button variant='contained' class="primaryButton">View post</Button>
                 </Stack>
               </Stack>
-              <Stack>
+              <Stack sx={{
+                textAlign: 'left'
+              }}>
                 <Typography>3 people are looking for feedback this week</Typography>
               </Stack>
             </Stack>
@@ -137,20 +175,26 @@ export default function About() {
           <Stack sx={{
             flexDirection: 'row',
           }}>
-            <Stack sx={{
-              flexDirection:'row'
+            <Stack direction={'row'} spacing={2} sx={{
+              py:2,
             }}>
-              {content?.map((data,index)=>(
+              {content?.map((data, index) => (
                 <Stack sx={{
-                  background:'black',
-                  mt:2,
-                  mr:2,
+                  background: 'black',
+                  mt: 2,
                   color: '#737373',
-
+                  borderRadius: 3,
+                  textAlign:'left',
+                  p:2,
                 }}>
                   <img src={(data?.img)} alt='contentIcon' />
-                  <Typography>{data?.name}</Typography>
-                  <Typography>{data?.disc}</Typography>
+                  <Typography sx={{
+                    color:'white',
+                  }}>{data?.name}</Typography>
+                  <Typography sx={{
+                    width:'70%',
+                    mb:2,
+                  }}>{data?.disc}</Typography>
                 </Stack>
               ))}
             </Stack>

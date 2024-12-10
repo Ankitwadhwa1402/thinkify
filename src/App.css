@@ -1,6 +1,84 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.h1 {
+  font-size: 64px;
+  width: 70%;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  margin-top: 30px;
+
+}
+
+.h3 {
+  font-size: 54px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+
+}
+
+.body2xl {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+.bodyxl {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+
+.primaryButton {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  width: (153px)px;
+  height: (52px)px;
+  padding: 12px 28px 12px 28px;
+  border-radius: 40px;
+  border-width: 0px;
+  color: white;
+  background: linear-gradient(315deg, #FB432C 0%, #FF591E 100%);
+}
+
 .App {
   text-align: center;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -32,6 +110,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
