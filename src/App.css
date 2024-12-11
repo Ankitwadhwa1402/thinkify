@@ -1,6 +1,6 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .h1 {
@@ -11,6 +11,27 @@
   margin: 0;
   margin-top: 30px;
 
+}
+
+.h2 {
+  font-size: 63px;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.whiteText {
+  color: white;
+}
+
+.blackText {
+  color: black;
+  font-weight: 600;
+}
+
+.greyText {
+  color: #525252;
+  ;
 }
 
 .h3 {
@@ -33,6 +54,11 @@
   font-weight: 400;
   text-align: left;
 
+}
+
+.xSmall {
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .flex {
@@ -70,8 +96,16 @@
   padding: 12px 28px 12px 28px;
   border-radius: 40px;
   border-width: 0px;
-  color: white;
+}
+
+.orangeBackground {
   background: linear-gradient(315deg, #FB432C 0%, #FF591E 100%);
+  color: white;
+}
+
+.whiteBackground {
+  background: white;
+  color: black;
 }
 
 .App {

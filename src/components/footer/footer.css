@@ -1,0 +1,15 @@
+.text14{
+  font-size:'14px'
+}
+.textAlignLeft{
+  text-align: left;
+}
+.footerItem{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 20px; ;
+}
+.itemHeading{
+  margin-bottom: 10px;
+}
