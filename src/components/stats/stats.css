@@ -1,4 +1,10 @@
 
+.lovedByItem{
+  width: 280px;
+  margin: 10px;
+}
 @media only screen and (max-width:600px) {
-
+  .lovedByItem{
+    width: 150px;
+  }
 }

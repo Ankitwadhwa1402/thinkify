@@ -29,7 +29,7 @@ export default function Charts() {
           </Typography>
         </Stack>
         <Stack sx={{
-          flexDirection:'row',
+          flexDirection:{md:'row',xs:'column'},
           justifyContent:'center',
         }}>
           {content?.map((data, idx) => (

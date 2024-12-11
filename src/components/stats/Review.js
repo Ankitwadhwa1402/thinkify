@@ -21,7 +21,7 @@ export default function Review() {
   return (
   <Stack sx={{
       background: "#F9FAFB",
-      flexDirection: 'row',
+      flexDirection: {md:'row',xs:'column'},
       p: 8,
 
     }}>
