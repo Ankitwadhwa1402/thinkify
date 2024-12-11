@@ -5,29 +5,28 @@ import "./demo.css"
 export default function Demo() {
   return (
     <Stack>
-      <Stack sx={{
-        justifyContent: 'center',
-        alignItems: 'center',
+      <Stack class="flex column center smallScreen" style={{
         background: `linear-gradient(315deg, #FB432C 0%, #FF591E 100%)`,
-        color: 'white',
+        color:'white'
+        
       }}>
-        <Typography class="h2">
+        <Typography class="h2 smallScreen">
           Keep every one in the loop
         </Typography>
-        <Typography class="body2xl">
+        <Typography class="body2xl smallScreen">
           All good things starts with a homepage. Get inspired without breaking your wallet.
         </Typography>
         <Stack sx={{
           justifyContent: 'center',
-          alignItems: "center",
+          alignItems: {md:"center",xs:'flex-start'},
           m: 2,
+          
         }}>
           <StartFreeButton whiteBackground={true} />
         </Stack>
-        <img src={require('../../assets/cards/project.png')} alt='project'
+        <img className="projectImg" src={require('../../assets/cards/project.png')} alt='project'
           style={{
-            height: '50%',
-            width: '50%',
+          
           }}
         />
       </Stack>
@@ -48,7 +47,7 @@ export default function Demo() {
           class="flex row center margin20"
         >
           <Typography sx={{
-            mr:2
+            mr: 2
           }}>Request a demo</Typography>
           <StartFreeButton />
         </Stack>

@@ -10,3 +10,13 @@
   color: #525252;
   ;
 }
+.projectImg{
+  height:50%;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .projectImg{
+    width: 100%;
+  }
+}

@@ -134,6 +134,9 @@
     text-align: left;
     width: 100%;
   }
+  .h2{
+    text-align: left;
+  }
   .smallScreen{
     display: flex;
     align-items: flex-start;
