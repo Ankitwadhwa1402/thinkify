@@ -39,16 +39,13 @@ export default function About() {
   )
   return (
     <Stack>
-      <Stack sx={{
-        display: 'flex',
-        flexDirection: 'row-reverse'
-      }}>
+      <Stack class="flex rowReverse smallScreenContainer">
         <Box sx={{
           flex: 1,
           background: '#FAFAFA',
 
         }}>
-          <img src={require('../../assets/cards/code.png')} alt='codeImg' />
+          <img src={require('../../assets/cards/code.png')} alt='codeImg' style={{width:'100%'}}/>
         </Box>
         <Stack sx={{
           alignItems: "flex-start",
@@ -58,7 +55,7 @@ export default function About() {
           <Stack sx={{
             alignItems: "center",
           }}>
-            <Button variant='contained' class="primaryButton">
+            <Button variant='contained' class="primaryButton orangeBackground">
               Share
             </Button>
           </Stack>
@@ -82,10 +79,7 @@ export default function About() {
         </Stack>
 
       </Stack>
-      <Stack sx={{
-        display: 'flex',
-        flexDirection: 'row'
-      }}>
+      <Stack class="flex row smallScreenContainer">
         <Box sx={{
           background: '#FAFAFA',
           flex: 1,
@@ -96,11 +90,13 @@ export default function About() {
         <Stack sx={{
           alignItems: "flex-start",
           flex: 1,
+          p: 4,
+
         }}>
           <Stack sx={{
             alignItems: "center",
           }}>
-            <Button variant='contained' class="primaryButton">
+            <Button variant='contained' class="primaryButton orangeBackground">
               Feedback
             </Button>
           </Stack>
