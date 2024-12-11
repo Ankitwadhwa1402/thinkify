@@ -1,15 +1,36 @@
-.text14{
-  font-size:'14px'
+.text14 {
+  font-size: '14px'
 }
-.textAlignLeft{
+
+.textAlignLeft {
   text-align: left;
 }
-.footerItem{
+
+.footerItem {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  margin-right: 20px; ;
+  margin-right: 20px;
+  ;
 }
-.itemHeading{
+
+.itemHeading {
   margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 14px;
+  color: #525252;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footerItem {
+    margin-bottom: 20px;
+  }
 }

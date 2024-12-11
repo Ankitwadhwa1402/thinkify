@@ -5,14 +5,12 @@ import "./footer.css"
 export default function Footer() {
   return (
     <Stack>
-      <Stack sx={{
-        flexDirection: "row",
-        justifyContent: 'space-around',
-        fontSize: '14px',
-        color: '#525252'
-      }}>
-        <Stack>
-          <img src={require("../../assets/mainLogo.png")} alt='logo' />
+      <Stack class="footer">
+        <Stack class="footerItem">
+          <img src={require("../../assets/mainLogo.png")} alt='logo' style={{
+            height:50,
+            width:50
+          }} />
         </Stack>
         <Stack class="footerItem">
           <Typography class="blackText">Product</Typography>
