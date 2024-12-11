@@ -118,16 +118,6 @@
 
 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .h1 {
     font-size: 32px;

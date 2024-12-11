@@ -3,8 +3,18 @@
   color: #5F6980;
 }
 
+.contentCards {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (max-width: 600px) {
   .smallScreenContainer {
     display: block;
+  }
+
+  .contentCards {
+    flex-direction: column;
+    margin-right: 0px;
   }
 }

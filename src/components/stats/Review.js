@@ -19,7 +19,7 @@ export default function Review() {
     }
   ]
   return (
-    <Stack sx={{
+  <Stack sx={{
       background: "#F9FAFB",
       flexDirection: 'row',
       p: 8,

@@ -3,21 +3,22 @@ import React from 'react'
 import checkbox from '../../assets/icons/checkbox.png';
 import play from '../../assets/icons/play.png';
 import './About.css'
+import { AlternateEmail, CheckCircle, CheckCircleOutline, List } from '@mui/icons-material';
 
 export default function About() {
   const content = [
     {
-      img: '../../assets/icons/mainIcon.png',
+      img: <AlternateEmail sx={{color:'white',mb:1}}/>,
       name: 'Mentions',
       disc: 'Mention anyone on your team to include them in a post.'
     },
     {
-      img: '',
+      img: <List  sx={{color:'white',mb:1}}/>,
       name: 'Polls',
       disc: 'Get a quick gut check from the team on design options.'
     },
     {
-      img: '',
+      img: <CheckCircleOutline sx={{color:'white',mb:1}}/>,
       name: 'Resolve comments',
       disc: 'Mark comments as resolved to keep the conversation focused.'
     },
@@ -171,9 +172,7 @@ export default function About() {
           <Stack sx={{
             flexDirection: 'row',
           }}>
-            <Stack direction={'row'} spacing={2} sx={{
-              py:2,
-            }}>
+            <Stack class="contentCards" spacing={2}>
               {content?.map((data, index) => (
                 <Stack sx={{
                   background: 'black',
@@ -182,8 +181,9 @@ export default function About() {
                   borderRadius: 3,
                   textAlign:'left',
                   p:2,
+                  mr:2
                 }}>
-                  <img src={(data?.img)} alt='contentIcon' />
+                  {data?.img}
                   <Typography sx={{
                     color:'white',
                   }}>{data?.name}</Typography>
